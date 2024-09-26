@@ -1,0 +1,10 @@
+opencv-python
+opencv-contrib-python
+pandas
+pyserial
+matplotlib
+scipy
+seaborn
+scikit-learn
+scipy
+pywavelets

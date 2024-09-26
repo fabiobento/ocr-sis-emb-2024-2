@@ -1,0 +1,21 @@
+{
+	"name": "ocr-sis-emb-2024-2",
+	"build": {
+		"dockerfile": "Dockerfile",
+        "context": ".."
+	},
+    "remoteUser": "fabio",
+	"workspaceMount": "source=/home/fabio/Documentos/vscode/ocr-sis-emb-2024-2/,target=/workspace,type=bind,consistency=cached",	
+	"workspaceFolder": "/workspace",
+	"runArgs": [
+		"--gpus","all",
+		//"--device=/dev/ttyUSB0:/dev/ttyUSB0",
+		//"--privileged", "--tty","-v", "/dev:/dev"
+		],
+	"mounts": [
+		"source=projectname-bashhistory,target=/commandhistory,type=volume"
+	  ],
+	  
+	"forwardPorts": [8888],
+	//"postCreateCommand": "sudo usermod -aG dialout fabio && sudo chown fabio /dev/ttyUSB0"	
+}
